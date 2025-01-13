@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun May  8 21:01:15 2022
 
-@author: siddhardhan
-"""
 
 import pickle
 import streamlit as st
@@ -76,9 +71,9 @@ if (selected == 'Diabetes Prediction'):
         diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
         
         if (diab_prediction[0] == 1):
-          diab_diagnosis = 'The person is diabetic'
+          diab_diagnosis = 'The person is more prone to diabetes'
         else:
-          diab_diagnosis = 'The person is not diabetic'
+          diab_diagnosis = 'The person is not much prone to diabetes'
         
     st.success(diab_diagnosis)
 
@@ -144,9 +139,9 @@ if (selected == 'Heart Disease Prediction'):
         heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
         
         if (heart_prediction[0] == 1):
-          heart_diagnosis = 'The person is having heart disease'
+          heart_diagnosis = 'The person is more prone to heart disease'
         else:
-          heart_diagnosis = 'The person does not have any heart disease'
+          heart_diagnosis = 'The person is not much prone to heart disease'
         
     st.success(heart_diagnosis)
         
@@ -237,9 +232,9 @@ if (selected == "Parkinsons Prediction"):
         parkinsons_prediction = parkinsons_model.predict([[fo, fhi, flo, Jitter_percent, Jitter_Abs, RAP, PPQ,DDP,Shimmer,Shimmer_dB,APQ3,APQ5,APQ,DDA,NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE]])                          
         
         if (parkinsons_prediction[0] == 1):
-          parkinsons_diagnosis = "The person has Parkinson's disease"
+          parkinsons_diagnosis = "The person is more prone to Parkinson's disease"
         else:
-          parkinsons_diagnosis = "The person does not have Parkinson's disease"
+          parkinsons_diagnosis = "The person is not much prone to  Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
 
